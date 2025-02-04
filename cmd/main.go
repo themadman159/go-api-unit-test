@@ -22,6 +22,10 @@ func main() {
 		log.Fatalf("Error initializing database: %v", err)
 	}
 
+	if err := database.Migration(db); err != nil {
+		log.Fatalf("Error migrating database: %v", err)
+	}
+
 	app := fiber.New()
 
 	routes.InitRoutes(app, db)
