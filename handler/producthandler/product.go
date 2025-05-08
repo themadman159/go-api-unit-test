@@ -10,6 +10,7 @@ import (
 
 type IProductHandler interface {
 	GetAll(c *fiber.Ctx) error
+	GetByID(c *fiber.Ctx) error
 }
 
 type ProductHandler struct {

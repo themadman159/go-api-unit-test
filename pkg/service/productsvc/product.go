@@ -9,6 +9,7 @@ import (
 
 type IProductService interface {
 	GetAllProducts() (*[]model.Product, error)
+	GetByID(id int) (*model.Product, error)
 }
 
 type ProductService struct {

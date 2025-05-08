@@ -14,17 +14,17 @@ func DatabaseConfig() *config {
 
 	username := os.Getenv("MYSQL_USER")
 	if username == "" {
-		username = "root"
+		username = "your_username"
 	}
 
 	password := os.Getenv("MYSQL_PASSWORD")
 	if password == "" {
-		password = "root"
+		password = "your_password"
 	}
 
 	database := os.Getenv("MYSQL_DATABASE")
 	if database == "" {
-		database = "go_api"
+		database = "your_database_name"
 	}
 
 	host := os.Getenv("MYSQL_HOST")
