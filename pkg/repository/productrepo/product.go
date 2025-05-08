@@ -8,6 +8,7 @@ import (
 
 type IProductRepository interface {
 	GetAllProducts() (*[]model.Product, error)
+	GetByID(id int) (*model.Product, error)
 }
 
 type ProductRepository struct {

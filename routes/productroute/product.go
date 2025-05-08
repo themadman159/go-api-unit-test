@@ -11,5 +11,6 @@ func ProductRoute(api fiber.Router, db *gorm.DB) {
 
 	productHandler := producthandler.NewProductHandler(db)
 	api.Group("/products").
-		Get("/", productHandler.GetAll)
+		Get("/", productHandler.GetAll).
+		Get("/:id", productHandler.GetByID)
 }
